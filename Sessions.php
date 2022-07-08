@@ -13,7 +13,7 @@ To Modify a session you need to change a session variable, (just overwrite it).
         <style> body{background-color:gray;}</style>
             <?php
             /*
-            ----Start a Session----
+            ----Session_Start----
             A session is started with session_start() function
             */
             session_start();
@@ -26,15 +26,15 @@ To Modify a session you need to change a session variable, (just overwrite it).
             print_r($_SESSION);
             echo "</pre>";
             /*
-            ----session_Unset----
+            ----Session_Unset----
             The session function frees all the variable currently registered.
             This function has no parameters.
             Returns true on success or false on failure.
             */
             session_unset();
             /*
-            ----session_destroy----
-            dstroy session is dstroy all of the data associated with the current session it does not 
+            ----Session_Destroy----
+            destroy session is dstroy all of the data associated with the current session it does not 
             unset any of global variables associated with the session ,or unset the session cookie . 
             to use the session variable again ,session_start() has to be called. 
             */
