@@ -1,22 +1,43 @@
 <?php
-session_start();
+/*
+----Session----
+A session ia away to store information (in variables)to be used across multiple pages.
+Session variable are set with the php globel variable: $_SESSION.
+To Modify a session you need to change a session variable, (just overwrite it).
+*/
 ?>
 <!DOCTYPE html>
     <html>
         <head></head>
         <body>
         <style> body{background-color:gray;}</style>
-            
             <?php
-            /*$_SESSION["fname"] = "mahmoud";
+            /*
+            ----Start a Session----
+            A session is started with session_start() function
+            */
+            session_start();
+            $_SESSION["fname"] = "Ahmed";
             $_SESSION["sname"] ="khalid";
-            echo "sesion variables are set succssfuly.".$_SESSION["fname"] ." ".$_SESSION["sname"];
+            echo "session variables are set succssfuly.".$_SESSION["fname"] ." ".$_SESSION["sname"];
             ?>
             <?php
             echo "<pre>";
             print_r($_SESSION);
-            echo "</pre>";*/
+            echo "</pre>";
+            /*
+            ----session_Unset----
+            The session function frees all the variable currently registered.
+            This function has no parameters.
+            Returns true on success or false on failure.
+            */
             session_unset();
+            /*
+            ----session_destroy----
+            dstroy session is dstroy all of the data associated with the current session it does not 
+            unset any of global variables associated with the session ,or unset the session cookie . 
+            to use the session variable again ,session_start() has to be called. 
+            */
             session_destroy();
             ?>
 
